@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+    <meta name="description" content=" ">
+    <meta name="author" content=" ">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>
+		Acne Scar Removal Project - About Us
+	</title>
+
+
+	<link rel="stylesheet" href="_styles.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <script type="text/javascript">
+	
+		function displayGlossary() {
+			document.getElementById("results").style.display = "block";
+		}
+
+		function exitGlossary() {
+			document.getElementById("results").style.display = "none";	
+		}
+	</script>
+    
+	<script type="text/javascript">
+		function validate_required(field,alerttxt) {
+			with (field) {
+				if (value==null||value=="")
+			{
+				alert(alerttxt);return false;
+			} else {
+				return true;
+				}
+			}
+		}
+
+		function validate_form(thisform) {
+			with (thisform) {
+				if (validate_required(search,"Please enter somthing to search.")==false)
+			{
+				search.focus();return false;}
+			}
+		}
+	</script>
+	
+	<script type="text/javascript" src="minAjax.js"></script>
+	
+</head>
+
+<body>
+
+	<main>
+
+	<header>
+		<h1 id="logo_replacement">
+			ASRP
+		</h1>
+
+		<a id="mobile_hamburger" href="#nav">
+    		<img src="mobile_hamburger.png" alt="MENU">
+   			<BR>
+        	MENU
+ 		</a>
+ 
+
+	</header>
+
+		<div id="breadcrumbs">
+    		<ul>
+    			<li>
+        			<a href="index.html">
+            			Home
+            		</a>
+        		</li>
+        
+        		<li>
+        			Research Wiki
+        		</li>
+    		</ul>
+		</div>
+
+	<section class="research_header">
+    
+	<p id="font_size_30" class="sub_headline">
+    	<strong> 
+        	Research Wiki 
+        </strong> 
+    </p>
+
+	</section>
+
+	<section id="research_box" class="white_box_content">
+    	<h2>
+        	The ASRP Glossary
+        </h2>
+		<form id="research_search_container" action="search.php" method="post">        
+        	<input id="search" type="search" name="search" placeholder=" Type your search term" onsubmit="validate_form(this)" />
+        		<div>
+                	<input class="button_submit" type="submit" value="Search" />
+                </div>
+    	</form>
+        
+		<hr />
+
+		<p>
+        	Browse by
+        </p>
+        
+		<table id="glossary">
+         	<tr>
+               	<td>
+					<a onclick="displayGlossary()" href="glossary.php?letter=a" target="single_letter_div">
+               			A
+					</a>
+                </td>
+
+                <td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=b" target="single_letter_div">
+    	           		B
+					</a>
+               </td>
+
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=c" target="single_letter_div">
+	               		C
+					</a>
+               </td>
+
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=d" target="single_letter_div">
+	               		D
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=e" target="single_letter_div">
+               		E
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=f" target="single_letter_div">
+               		F
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=g" target="single_letter_div">
+               		G
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=h" target="single_letter_div">
+               		H
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=i" target="single_letter_div">
+               		I
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=j" target="single_letter_div">
+               		J
+					</a>
+               </td>
+        	</tr>
+            <tr>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=k" target="single_letter_div">
+               		K
+                    </a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=l" target="single_letter_div">
+               		L
+					</a>
+               </td>
+               <td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=m" target="single_letter_div">
+               		M
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=n" target="single_letter_div">
+               		N
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=o" target="single_letter_div">
+               		O
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=p" target="single_letter_div">
+               		P
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=q" target="single_letter_div">
+               		Q
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=r" target="single_letter_div">
+               		R
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=s" target="single_letter_div">
+               		S
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=t" target="single_letter_div">
+               		T
+					</a>
+               </td>
+			</tr>            
+            <tr>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=u" target="single_letter_div">
+               		U
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=v" target="single_letter_div">
+               		V
+					</a>
+               </td>
+				<td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=w" target="single_letter_div">
+               		W
+					</a>
+               </td>
+               <td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=x" target="single_letter_div">
+               		X
+					</a>
+               </td>
+               <td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=y" target="single_letter_div">
+               		Y
+					</a>
+               </td>
+               <td>
+               		<a onclick="displayGlossary()" href="glossary.php?letter=z" target="single_letter_div">
+               		Z
+					</a>
+               </td>
+               <td>
+               		<a href="#NUM">
+               		#
+					</a>
+               </td>
+           </tr>
+    </table>
+
+    </section>
+
+	<section id="main_content" class="white_box_content">
+	<h2>
+    	What is Research Wiki?
+    </h2>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, sint, earum, natus harum alias minima laborum aperiam aliquid officiis autem fugit corporis voluptas ex. Libero illum excepturi quam expedita porro!
+    </p>
+    
+    <p>
+    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, quidem, porro, nobis, explicabo necessitatibus illo ratione consequuntur numquam.
+    </p>
+    
+    <p>
+		loremLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, consequuntur, recusandae veritatis nisi tempore omnis alias deserunt natus fuga placeat.
+	</p>      
+
+	<p>
+    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, molestias ipsam quas voluptatem expedita optio perspiciatis nostrum! Perferendis ex sit odit aspernatur modi natus. Esse, repellat autem et totam recusandae!
+    </p>
+
+	<div class="button_link_center">
+		<a id="view_wiki" onclick="displayGlossary()" href="glossary.php?letter=all" target="single_letter_div">
+ 			View Entire Glossary
+   		</a>
+    </div>
+        
+    </section>
+
+	<section id="results" class="white_box_content">
+    
+    	<div id="exit" onclick="exitGlossary()">
+        	x
+        </div>
+
+		<iframe width="100%" height="100%" src="glossary.php?letter=all" name="single_letter_div">
+			We're sorry you don't support iframes :(
+		</iframe>
+
+    </section>
+
+	<section id="research_submit_box" class="white_box_content">
+		<h2>
+        	Help this section grow
+        </h2>
+        
+        <p>
+       		Consectetur adipisicing elit. Quia accusamus excepturi aut eos non nisi expedita nihil sed! Esse, possimus assumenda asperiores perferendis alias placeat natus dicta nam totam doloribus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, illum quibusdam repellat vel fugiat corrupti pariatur possimus a culpa ad iure eius quisquam sit ex quam nulla saepe doloremque. Atque.
+		</p>
+        
+        <div class="button_link_center">
+	        <a class="button_link" href="contact.html">
+    	    	Tell Me More
+        	</a>
+        </div>
+
+    </section>
+    
+    
+<nav id="nav" class="navigation_options">
+	<ul>
+		<li>
+        	<a href="index.html">
+            	Home
+            </a>
+        </li>
+
+		<li>
+        	<a href="about.html">
+            	About
+            </a>
+        </li>
+        
+        <li>
+        	<a id="active">
+            	Research
+            </a>
+        </li>
+        
+        <li>
+        	<a href="blog.html">
+            	Blog
+            </a>
+        </li>
+        
+        <li>
+        	<a href="reviews.html">
+            	Reviews
+            </a>
+        </li>
+
+        <li>
+        	<a href="contact.html">
+            	Contact
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+<footer>
+	<p>
+    	&copy; AcneScarRemoval.co
+    </p>
+
+    <ul>
+        <li>
+        	<a href="/legal/privacy.html">
+            	Privacy Policy
+            </a>
+        </li>
+        <li>
+        	<a href="/legal/dmca.html">
+            	DMCA Policy
+            </a>
+        </li>
+        <li>
+        	<a href="/legal/affiliate.html">
+            	Affiliate Disclosure
+            </a>
+        </li>
+        <li>
+        	<a href="/legal/terms.html">
+            	Terms of Use
+            </a>
+        </li>
+    </ul>
+</footer>
+
+		</main>
+	</body>
+</html>

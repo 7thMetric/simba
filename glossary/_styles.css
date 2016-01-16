@@ -1,0 +1,1591 @@
+@charset "utf-8";
+/* Thank you for taking interest in what's under the hood */
+/* I've added comments to help you understand my thoughts while creating */
+/* Each section is separated by a Table of Content for easy browsing */
+/* This is a "Mobile+" Structured File */
+/* Written by Chadd Rivera, Seventh Metric Inc. */
+/* Start General */
+body {
+	background-color: #CCFFCC;
+	font-family: verdana, arial, san serif;
+}
+
+/* Using Main-Tag as my Wrapper */
+main {
+	/* Formatting */
+	margin: auto;
+	max-width: 960px;
+	min-width: 320px;
+	
+	/* Styling */
+	background-color: #CCFFCC ;	
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #99CC66;
+}
+
+/* End General */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Stealth-Mode */
+#breadcrumbs {
+	display: none;
+}
+
+.subscription_values {
+	display: none;
+}
+
+#slider {
+	display: none;
+}
+/* End Stealth-Mode */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start #HACK - CLEAR FIX */ 
+
+header:before, 
+header:after {
+	content:"";
+	display:table;
+}
+
+header:after {
+	clear:both;
+}
+        
+/* For IE 6/7 (trigger hasLayout) */
+header {
+	zoom:1;
+}
+/* End #HACK - CLEAR FIX */
+
+/************************************************
+*************************************************
+************************7************************
+************************7************************
+************************7************************
+*************************************************
+************************************************/
+
+/* MOBILE - MOBILE - MOBILE - MOBILE - MOBILE */
+/************************************************
+	+HEADER  
+		- <header>, Background-Color: #999999
+		- <P> Container, Background-Color: #000000
+		- Search-Box (<input>), Background-Color: #999999
+
+************************************************/
+
+/* Navigation Menu, Words and Surrounding Container */
+header {
+    margin: auto;
+    /* min-width: 320px;
+	max-width: 960px; */ 
+	background-color: #999999;
+    padding: 1px 10px 1px 10px;
+	overflow: hidden;
+}
+
+/* CLASS and ID Selectors */
+/* MOBILE */
+/*************************************
+	NOTE: CSS IS CATEGORIZED VISUALLY
+	All Classes and IDs are listed in the order
+	that they appear on the HOMEPAGE.
+ ************************************/
+ /* Items within Header */
+#logo_replacement {
+	float: left;
+}
+
+#mobile_hamburger {
+	/* Header Positioning */
+	float: right;
+	padding: 25px 5px;
+	
+	/* Text Formatting */
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+    font-size: .7em;
+    font-weight: bold;
+}
+
+.sub_headline { /* The Tag-Line or Title in Mobile Version */
+	/* Container Dimensions */
+	margin: auto;
+	padding: 20px;
+	text-align: center;
+	
+	/* Text Formatting */
+	background-color: #000000;
+	color: #FFFFFF;
+	font-style: italic;
+	font-size: 1.1em;	
+}
+
+#review_title_summary, #full_review, h3+div, #runner_ups, section[id*="post"], section[id*=main_content], #results, article, summary, section[id*=box] {
+	min-width: 320px;
+	max-width: 900px;
+	overflow: hidden;
+}
+
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Submit Button */
+/* This button will be formatted the same as button_link */
+input.button_submit {
+	width: 150px;
+	height: 30px; 
+	background:#000000;
+
+	color:#FFFFFF;
+	font-family: Verdana, Arial, Sans-Serif;
+	
+	cursor:pointer;
+	border: 1px solid #999999;
+	border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+}
+
+/* Button Styling - On hover */
+input.button_submit:hover {
+    border: 1px solid #FFFFFF;
+    background-color: #99CC66;
+	color: #000000;
+}
+/* End Submit Button */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Link (look-a-like)Button */
+div.button_link_center {
+	padding-top: 5px;
+	text-align: center;
+}
+
+a.button_link {
+	/* Styling Link's Container to look like a Button */
+    display: inline;
+    padding: 7px 15px 7px 15px;
+    background-color: #000000;
+
+	/* Set Container Shape of our Link-as-a-Button */
+	cursor:pointer;
+    border: 1px solid #999999;
+    border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+
+	/* Text Decoration for our Link-as-a-Button */
+    text-decoration: none;
+	font-size: 1em; 
+	font-weight: bold;
+    color: #FFFFFF;
+}
+
+a.button_link:hover {
+    border: 1px solid #FFFFFF;
+    background-color: #99CC66;
+	color: #000000;
+}
+
+div.button_link_read_more_right_align {
+	text-align: right;
+}
+/* End Link (look-a-like) Button */
+
+/************************************************
+	+Mobile-Nav
+	+MobileNavigation
+	+Navigation
+		- <nav> Container Background (Mobile-Mode)
+		- <li> Navigation Link formatting (including block elements)
+		- <li> Styling for the Active element with #active Class
+		
+************************************************/
+.navigation_options {
+	clear: both;
+}
+
+.navigation_options ul { /* Sets Container Color */
+	background-color: #999999;
+    list-style: none;
+    padding: 5px 0;
+}
+
+.navigation_options li a { 
+    /* Sets Seperator (Border-Bottom) within 
+	Container and Text Color of the Menu-Links */
+    display: block;
+    padding: 0 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.navigation_options li:last-child a {
+	/* Get rid of the last border-bottom seperator */
+    border-bottom: none;
+}
+ 
+.navigation_options li a:hover, 
+.navigation_options li a:focus {
+	/* Sets the On-Hover Effects */
+    color: #99CC66;
+    background: #000000;
+}
+
+#active {
+    color: #99CC66;
+    background: #000000;
+}
+
+/************************************************
+	+Footer
+		- <p>, <ul> and <li> are set to display: inline
+		- for <ul> needed to override browser and set padding-left to 1px
+		- Also set the seperators between the footer links
+		
+************************************************/
+footer {
+	clear: both;
+	background-color: #999999;
+	text-align: center; /* Center everything inside footer */
+	padding: 10px;
+}
+
+footer p {
+	display: inline;
+	color: #FFFFFF;
+	font-size: .7em;
+}
+
+footer ul {
+	list-style: none;
+	display: inline;
+	padding-left: 1px; /* This is to over-ride <ul>'s auto-indent */
+}
+
+footer li {
+	display: inline;
+}
+
+footer li a {
+	text-decoration: none;
+	font-size: .7em;
+	color: #FFFFFF;
+}
+
+footer li:first-child:before { /* Decided that the "-" is considered styling, so added in CSS */
+	content: '- ';
+	color: #FFFFFF;
+}
+
+footer li:not(:last-child):after { /* This one too. Getting kinda fancy with Selectors */
+	content: '- ';
+	color: #FFFFFF;
+}
+
+/************************************************
+	+Inner Pages
+		- Set general .white_box_content and Big Font Sizes
+		- Uses Definition Lists for the Q/A (feels cleaner this way)
+		- Sets look and feel of mobile Subscription Box
+
+************************************************/
+/* Starts with the ABOUT Page - Mobile+ */
+/* Font Size */
+#font_size_30 {
+	font-size: 30px;
+	font-style: normal;
+}
+
+#font_size_20 {
+	font-size: 20px;
+	font-style: normal;
+}
+
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start White Box Content */
+#main_content {
+	margin-top: 10px;
+}
+
+.white_box_content {
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 10px 10px 20px 10px;
+	background-color: #FFFFFF;
+}
+
+div.white_box_content {
+	margin: 1px;
+}
+
+.white_box_content dt {
+	margin-bottom: 5px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.white_box_content dd {
+	margin-bottom: 15px;
+	margin-left: 5px;
+}
+
+.white_box_content h2 {
+	margin-bottom: 1px;
+}
+
+.white_box_content h2~p {
+	margin-top: 1px;
+}
+
+section[id*="main"] h2 {
+	margin-top: 1px;
+}
+
+section[id*="post"] p {
+	text-indent: 10px;
+}
+
+.white_box_content blockquote {
+	font-family: Verdana, Arial, San Serif;
+	font-size: 1.25em;
+	font-style: italic;
+	width: 75%;
+	margin: 0.25em auto;
+	padding: 0.25em 40px 0.25em 25px;
+	line-height: 1.45;
+	position: relative;
+	color: #333333;
+}
+
+.white_box_content blockquote:before {
+	display: block;
+	content: "\201C";
+	font-family: Georgia, serif;
+	font-size: 80px;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	color: #999999;
+}
+
+.white_box_content blockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+ 
+.white_box_content blockquote cite:before {
+content: "\2014 \2009";
+}
+/* End White Box Content */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Search Results Page */
+#search_results h2 {
+	font-weight: normal;
+}
+
+#search_results h2 em {
+	text-decoration: underline;
+}
+
+#search_results ul {
+	list-style-type: square;
+}
+
+/* End Search Results Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Subscription Box */
+.subscription_box {
+	text-align: center;
+}
+
+.subscription_box p {
+	margin-top: 1px;
+}
+
+#post_script {
+	margin-bottom: 1px;	
+}
+/* End Subscription Box */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Blog Categories */
+#blog_categories {
+	margin: 15px auto;
+	max-width: 940px;
+	min-width: 300px;
+	padding: 10px;
+	background-color:#FFFFFF;		
+	text-align: center;
+}
+
+#blog_categories strong {
+	font-size: 20px;	
+}
+
+#blog_categories ul {
+	padding-left: 0px; /* Reset <ul>'s default styling */
+	margin: 1px 5px 1px 5px;
+}
+
+#blog_categories li {
+	display: inline;
+	text-align: center;
+}
+
+#blog_categories li a {
+	font-size: .8em;
+	color: #000000;
+
+}
+
+#blog_categories li a:hover {
+	font-size: .8em;
+	color:#99CC66;
+	text-decoration: underline;
+}
+
+#blog_categories li:not(:last-child):after {
+	padding: 0px 10px 0px 10px;
+	content: " | ";
+}
+/* End Blog Categories */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Blog Page */
+#header_image_post001 {
+	background:url("background_post001.png") no-repeat;
+}
+
+#header_title_post001 {
+	background-color: #FF06E6;
+}
+
+
+#header_image_post002 {
+	background:url("background_post002.png") no-repeat;
+}
+
+#header_title_post002 {
+	background-color: #09B12C;
+}
+
+.blog_header_background {
+	margin:auto;
+	margin-bottom: 20px;
+	min-width: 300px;
+	max-width: 700px;
+	height: 115px;
+	border: 1px #000000 solid;
+}
+
+.blog_header_text {
+	margin: auto;
+	margin-top: 25px;
+	width: 80%;
+	height: 50px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	text-align: center;
+	border-radius: 15px;
+	opacity: 0.9;
+}
+
+.blog_header_text p {
+	margin-top: 1px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+a[href*="post"] {
+	font-weight:normal;
+	text-decoration: none;
+    background-color: #999999;
+	color: #000000;
+}
+/* End Blog Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Reviews Page */
+.product_reviews {
+	margin-bottom: 10px;
+}
+
+section[id*="review"] {
+	max-width: 700px;
+	min-width: 320px;
+}
+
+#header_image_review001 {
+	background:url("background_review001.png") no-repeat;
+}
+
+#header_image_review002 {
+	background:url("background_review002.png") no-repeat;
+}
+
+#header_image_review003 {
+	background:url("background_review003.png") no-repeat;
+}
+
+div.review_header_background {
+	margin: auto;
+	margin-bottom: 10px;
+	padding-top: 110px;
+	padding-bottom: 15px;
+	min-width: 300px;
+	max-width: 500px;
+	height: 5px;
+	text-align: center;
+}
+
+div.review_header_background p {
+	margin-top: 1px;
+	text-indent: 10px;
+	font-size: 20px;
+	color: #FFFFFF;
+	background-color: #000000;
+	opacity: 0.9;
+}
+
+a[href*="review0"] {
+	font-weight:normal;
+	text-decoration: none;
+    background-color: #999999;
+	color: #000000;
+}
+
+/* End Reviews Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Indie Reviews Page */
+
+#review_grey_box {
+	margin: auto;
+	max-width: 800px;
+	min-width: 320px;
+	padding: 10px;
+	background-color: #CCCCCC;
+}
+
+div.center_review_image {
+	margin: auto;
+	margin-bottom: 15px;
+	overflow: hidden;
+	max-width: 500px;
+	min-width: 300px;
+}
+
+img.review_image {
+	width: 100%;
+}
+
+h2+h3 {
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+#review_recommendation {
+	margin: 15px auto;
+	padding: 15px 10px;
+	min-width: 300px;
+	max-width: 650px;
+	background-color:#CCCCCC;
+}
+
+#review_recommendation h2 {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+#review_recommendation p {
+	margin: auto;
+	margin-bottom: 15px;
+	/* max-width: 350px;
+	min-width: 300px; */
+}
+
+#runner_ups h2, #full_review h2 {
+	padding-left: 1px;
+	padding-bottom: 1px;
+}
+
+#runner_ups {
+	padding-bottom: 5px;
+}
+
+#runner_ups ul {
+	list-style: none;
+	display: inline;
+}
+
+#runner_ups li {
+	margin-bottom: 10px;	
+}
+
+#runner_ups a[href*="amazon.com"] {
+	font-weight: bold;
+}
+
+#runner_ups a[href*="amazon.com"]:hover {
+	color: #99CC66;
+}
+
+#runner_ups a[href*="amazon.com"]:after {
+	content: " - ";
+}
+
+#full_review ul, #related_links ul {
+	list-style-type: square;
+}
+
+#review_recommendation .center_review_image {
+	max-width: 186px;
+	min-width: 186px;
+}
+
+h3[id*="full_review"] {
+	margin-top: 15px;
+	margin-bottom: 1px;
+}
+
+/* End Indie Reviews Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Research Page */
+#research_box.white_box_content:not(.button_submit) {
+	margin-top: 15px;
+	background-color: #CCCCCC;	
+}
+
+#research_box h2 {
+	margin-top: 10px;
+	margin-bottom: 1px;
+	text-align: center;
+}
+
+#research_search_container form {
+	padding-bottom: 7%;	
+}
+
+#research_search_container input:not(:last-child) {
+	/* Form Positioning */
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px; 
+	
+	/* Form Size */
+	width: 85%;
+	height: 25px;
+	display:block;
+	
+	/* Form Styling */	
+	border: 1px solid #CCCCCC;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+#research_box #research_search_container input.button_submit {
+	float: none;
+	width: 130px;
+	font-weight: bold;
+}
+
+#research_box div {
+	margin: auto;
+	width: 130px;
+}
+
+#research_box hr {
+	margin: 10px auto;
+	text-align: center;
+	width: 80%;
+	height: 1px;
+	/* color: #000000;
+	background-color: #000000; */	
+}
+
+#research_box hr + p {
+	text-align: center;
+	margin-bottom: 1px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#research_box table {
+	margin: auto; 
+	width: 90%;
+}
+
+#research_box table td {
+	margin: auto; 
+	background-color: #AAAAAA;
+	padding: 10px;
+	vertical-align: middle;
+	text-align: center;
+}
+#research_box table td:hover {
+	margin: auto; 
+	background-color: #CCCCCC;
+	/* border: 1px #000000 dashed;
+	padding: 10px; */
+}
+
+#research_box td a {
+	width: 100%;
+	display: block;
+}
+
+#view_wiki {
+	cursor:pointer;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#results {
+	display:none;
+	/* position: absolute; */
+	height: 100%;
+}
+
+table.results_table  {
+	margin: auto;
+	width: 90%;
+	border: 1px #000000 dashed;
+}
+
+.results_table td {
+	display: block;
+}
+
+#results_h2 {
+	margin-left: 5%;
+	text-align: center;
+}
+.results_table span {
+	display: block;
+	text-align: center;
+	font-family: verdana, arial, sans serif;
+	font-size: .8em;
+}
+
+#exit {
+	cursor: pointer;
+	float: right;
+	color: #BBBBBB;
+}
+
+iframe {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#research_submit_box .button_link {
+	font-size: .8em;
+}
+
+/* End Research Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Research Term Page */
+
+#main_content hr {
+	margin: 10px auto;
+	text-align: left;
+	width: 100%;
+	height: 1px;
+	color: #000000;
+	background-color: #000000;
+	border: 0 none;
+}
+
+#main_content #writer {
+	display: block;
+	margin-bottom: 15px;
+}
+
+dfn {
+	font-weight: bold;
+}
+
+#toc {
+	padding: 5px;
+	width: 200px;
+	background-color: #CCCCCC;
+}
+
+#toc ol {
+	margin-top: 10px;
+	width: 150px;
+	background-color: #CCCCCC;
+}
+
+article[id*="main_content"] h2 {
+	font-weight: normal;
+}
+
+article[id*="main_content"] a {
+	text-decoration: underline;
+	color: #777777;	
+}
+
+article[id*="main_content"] a:hover {
+	color: #99CC66;	
+}
+
+
+article[id*="main_content"] div {
+	margin: auto;
+	padding: 15px;
+	width: 300px; 
+	background-color: #CCCCCC;
+}
+
+article[id*="main_content"] div p {
+	margin-bottom: 5px;
+	font-size: .8em;
+	text-align: center;
+}
+
+.reference li {
+	margin-bottom: 10px; 
+	font-size: .9em;
+}
+
+.reference li a {
+	text-decoration: none;
+}
+
+.reference li a:hover {
+	color: #99CC66;
+}
+
+#reference_container {
+	margin: 1px;
+	padding: 1px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+#reference_container hr {
+	margin: left;
+	width: 100%;
+}
+
+#next_to_image {
+	width: 100%;
+	padding: 1px;
+	margin: 1px;
+	background-color: #FFFFFF;
+}
+
+#next_to_image p {
+	font-size: inherit;
+	text-align: left;			
+}
+
+/* End Research Term Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Subscription Register Page */
+
+#dynamic_jbox {
+	background-color: #CCCCCC;
+}
+
+#dynamic_jbox select {
+	padding: 5px;
+
+	width: 100%;
+	height: 34px;
+
+	background: transparent;
+	font: 1em Verdana, Arial, San-Serif !important;
+
+	border: 0;
+	border-radius: 0;
+
+	font-size: 16px;
+	line-height: 1;
+	-webkit-appearance: none;
+}
+
+.register_desktop_container {
+	background-color: transparent;
+}
+
+.center_register_desktop {
+	margin: inherit;
+	margin-bottom: 1px;
+	overflow: hidden;
+
+	max-width: 900px;
+	min-width: 320px;
+}
+
+#dynamic_jbox div {
+	margin: auto;
+
+	/* max-width: 472px;
+	min-width: 292px; */
+	max-width: 500px;
+	min-width: 320px;
+	
+	height: 35px;
+	overflow: hidden;
+
+	background: url("select_arrow.jpg") no-repeat right #FFFFFF;
+	border: 1px solid #999999;
+}
+
+#offer_1 {
+	display: block;
+}
+
+#offer_2 {
+	display: none;
+}
+
+#offer_3 {
+	display: none;
+}
+
+#benefits {
+	margin: auto;
+	width: 300px;
+}
+
+#benefits li {
+	margin-bottom: 25px;
+	list-style-image: url("check.png");
+	font-weight: bold;
+}
+
+#register_box.white_box_content {
+	background-color: #CCCCCC;
+}
+
+#register_box input:not(:last-child) {
+
+	/* Form Positioning */
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 10px; 
+	
+	/* Form Size */
+	width: 300px;
+	height: 35px;
+	display:block;
+	
+	/* Form Styling */	
+	border: 1px solid #CCCCCC;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+#register_box h2 {
+	margin-top: 1px;
+	text-align: center;
+	font-size: 2em;
+}
+
+#register_box .button_submit {
+	width: 200px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#jbox_two p {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+#jbox_container.white_box_content {
+	background-color: transparent;
+}
+
+#point_container {
+	margin: auto;
+	max-width: 900px;
+	min-width: 320px;
+	height: 35px;
+	background:url("Point.png") no-repeat;
+	background-position: center;
+}
+
+#jbox_pointed {
+	margin: auto;
+	max-width: 900px;
+	min-width: 320px;
+	padding: 15px 15px 30px 15px;
+	background-color: #CCCCCC;
+}
+
+#jbox_pointed h2 {
+	margin-top: 5px;
+}
+
+/* End Subscription Register Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Contact Page */
+#contact_form_container p {
+	display: none;
+}
+
+#contact_form_container form {
+	padding-bottom: 7%;	
+}
+
+#contact_form_container input:not(:last-child) {
+	/* Form Positioning */
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px; 
+	
+	/* Form Size */
+	width: 85%;
+	height: 25px;
+	display:block;
+	
+	/* Form Styling */	
+	border: 1px solid #CCCCCC;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+#contact_form_container textarea {
+	/* Form Positioning */
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px; 
+	display:block;
+	width: 75%;
+	height: 120px;
+	padding: 5px;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	font-family: verdana, arial, san serif;
+}
+
+#contact_form_container input.button_submit {
+	float: right;
+	margin-top: 5px;
+}
+/* End Contact Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Privacy Policy Page */
+#questions {
+	margin: auto;
+	max-width: 500px;
+	min-width: 300px;
+	padding: 10px 10px 20px 10px;
+	background-color:#CCCCCC;
+}
+
+#questions p:first-child {
+	margin-top: 1px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#questions p:last-child {
+	margin-top: 1px;
+}
+/* End Privacy Policy Page */
+
+/************************************************
+*************************************************
+************************7************************
+************************7************************
+************************7************************
+*************************************************
+************************************************/
+
+/* DESKTOP - DESKTOP - DESKTOP - DESKTOP - DESKTOP */
+/************************************************
+	+Desktop
+		- #mobile_hamburger dissappears
+		- navigation_options are re-positioned in desktop-mode
+		- 
+		
+************************************************/
+@media only screen and (min-width: 941px) and (max-width: 3000px) {
+/* CLASS and ID Selectors */
+/* DESKTOP */
+/*************************************
+	NOTE: CSS IS CATEGORIZED VISUALLY
+	All Classes and IDs are listed in the order
+	that they appear on the HOMEPAGE.
+ ************************************/
+/* General */
+body {
+	background-color: #333333;
+ 	}
+ 
+/* section[id*="post"], section[id*=main_content], #full_glossary {
+	max-width: 900px;
+	min-width: 300px;
+} */
+
+/* Start Stealth-Mode, Hidden in Desktop-Mode */
+.desktop_under_footer .sub_headline {
+	display: none;	
+	}
+
+.contact_us .sub_headline {
+	display: none;
+	}
+	
+.product_reviews .sub_headline {
+	display: none;
+	}
+
+.research_header .sub_headline {
+	display:none;
+	}
+
+#mobile_hamburger {
+	display: none;
+	}
+	
+#search_paragraph_tag {
+	display:none;
+	}
+
+/* End Stealth-Mode */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Desktop Navigation */	
+.navigation_options { /* re-positions the <ul> to the top of the page */
+        position: absolute;
+        top: 25px;
+        right: 15%;
+        background: none;
+    }
+     
+.navigation_options li { /* list <li>'s horizontally */
+        display: inline;
+    }
+     
+.navigation_options li a { /* Stack each link Side-by-Side */
+		/* Stack and Separate */
+        float: left;
+        padding: 0 10px;
+
+		/* Style */
+        border: none;
+        border-radius: 5px;
+        	-webkit-border-radius: 5px;
+        	-moz-border-radius: 5px;
+    }
+/* End Desktop Navigation */	
+/************************************************
+	+Inner Pages
+		- About Us
+		- Subscription Box
+
+************************************************/
+/* White Box Content */
+.white_box_content {
+	margin-top: 10px;
+	}
+
+div.white_box_content {
+	margin: 5px;
+	width: 500px;
+	background-color: #FFFFFF;	
+	}
+
+.desktop_under_footer p {
+		margin-top: 1px;
+		margin-bottom: 1px;
+		margin-left: 0px;
+		color: #000000;
+	}
+
+input.button_submit {
+	display: inline;
+	width: 145px;
+	}
+/***********************************/
+/***********************************/
+/***********************************/
+/* About Us */
+.about_us {
+		height: 150px;
+		background: url("background_about.png") no-repeat;
+	}
+
+.about_us .sub_headline {
+	background-color: transparent;
+	text-align: left;
+	padding-top: 100px;
+	padding-left: 15px;
+	}
+/* End About Us /
+/***********************************/
+/***********************************/
+/***********************************/
+/* Contact Page */
+#contact_form_container {
+	margin: auto;
+	width: 900px;
+	margin-bottom: 15px;
+	background:url("background_contact.png") no-repeat;
+	}
+
+#contact_form_container p {
+	display: block;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 30px;
+	padding: 10px;
+	text-align: center;
+	}
+
+#contact_form_container form {
+	width: 400px;
+	}
+
+#contact_form_container textarea {
+	/* Form Positioning */
+	margin: 1px 1px 1px 30px;
+	width: 90%;
+	height: 200px;
+	}
+/* End Contact Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Blog Page - Slider */
+#slider {
+	display: block;
+	width: 100%;
+	margin-bottom: 1px;
+	/* border: 1px #000000 solid; */
+	}
+
+.bx-wrapper ul li { 
+	height: 235px;
+	width: 900px;
+	}
+
+ul.bxslider {
+  margin: 0;
+  padding: 0;
+	}
+
+.bxslider div {
+	margin-top: 0px;
+	width: 960px;
+	height:250px;
+	border: 1px solid #FFFFFF;
+	/* padding: 10px; */ 
+	text-align: center;
+	color: #FFFFFF;
+	}
+
+.bxslider div h2 {
+	margin-top: 15px;
+	margin-bottom: 1px;
+	}
+
+.bxslider div p {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	color: #FFFFFF;
+	}
+
+#slide001 {
+	background:url("background_slide001.png") no-repeat;
+	}
+
+.slider_overlay {
+	/* Overlay Positioning */
+	position:relative;
+	top:150px;
+	/* right: 1px; */
+	/* left: 1px; */
+	/* padding: 1px 1px 1px 1px; */
+	/* width:700px;*/
+	height:100px;
+	
+	/* Colors and Opacity of the Overlay*/
+	background:#000000;
+	opacity:0.9;
+	}
+	
+.slider_overlay h2 {
+	color: #FFFFFF;
+	}
+
+/* End Blog Page - Slider */	
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Indie Review Page */
+
+#author_name, #last_updated {
+	margin: auto;
+	width: 45%;
+	/* padding: 0px 5px; */
+	float: left;
+	}
+
+#author_name {
+	text-align: right;
+	padding-right: 10%;
+	}
+	
+#review_recommendation .center_review_image {
+	margin: 5px;
+	margin-right: 20px;
+	float: left;
+	}
+/* End Indie Review Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Subscription Register Page */
+
+#dynamic_jbox {
+	background-image: url("background_want_to_learn.png");
+}
+
+#dynamic_jbox h2, #dynamic_jbox p {
+	color: #FFFFFF;
+}
+
+.register_desktop_container {
+	margin: auto;
+	margin-bottom: 25px;
+	padding: 10px;
+	overflow: hidden;
+	
+	max-width: 900px;
+	min-width: 320px;
+	background-color: #FFFFFF;	
+	}
+	
+.center_register_desktop {
+	margin: auto;
+	width: 760px;
+	}
+	
+#dynamic_benefits {
+	float: left;
+	margin-right: 15px;
+	width: 350px;
+	}
+
+#register_box {
+	float: left;
+	margin-top: 55px;
+	width: 350px;
+	}
+
+#benefits li {
+	margin-bottom: 25px;
+	list-style-image: url("check_large.png");
+	font-weight: bold;
+	}
+
+#jbox_two p {
+	margin: auto;
+	padding-top: 5px;
+	width: 500px;
+	}
+
+/* End Subscription Register Page */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Research Page */
+#research_search_container {
+	margin: auto;
+	width: 900px;
+	margin-bottom: 15px;
+	}
+	
+.results_table td {
+	display: initial;
+}
+
+#results_h2 {
+	margin-left: 5%;
+	text-align: initial;
+}
+
+.results_table span {
+	display: initial;
+	text-align: initial;
+	padding-left: 2%;
+	font-family: verdana, arial, sans serif;
+	font-size: .8em;
+}
+
+/* End Research Page */
+/***********************************/
+/***********************************/
+/***********************************/	
+/* Start Research Term Page */
+summary #main_content hr {
+	margin: 10px 1px;
+	/* text-align: left; */
+	width: 100%;
+	height: 1px;
+	color: #000000;
+	background-color: #000000;
+	border: 0 none;
+}
+
+article[id*="main_content"] {
+	overflow: hidden;
+	clear: both;
+}
+
+article[id*="main_content"] div img {
+	width: 100%;
+}
+
+article[id*="main_content"] div {
+	width: 200px;
+	float: right;
+}
+
+#next_to_image {
+	max-width: 650px;
+	min-width: 500px;
+	float: left;	
+}
+
+/* End Research Term Page*/
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Bread Crumbs */
+#breadcrumbs {
+	display: block;
+	padding: 10px;
+	margin: 10px 1px 10px 1px;
+	background-color: #FFFFFF;
+	}
+
+#breadcrumbs ul {
+	list-style: none;
+	display: inline;
+	padding-left: 10px; /* This is to over-ride <ul>'s auto-indent */
+	}
+
+#breadcrumbs li {
+	display: inline;
+	font-size: 1em;
+	}
+
+#breadcrumbs li:last-child {
+	color: #AAAAAA;
+	}
+
+#breadcrumbs li a {
+	text-decoration: none;
+	color: #000000;
+	}
+
+#breadcrumbs li a:hover {
+	text-decoration: none;
+	color: #99CC66;
+	}
+
+#breadcrumbs li:not(:last-child):after { /* This one too. Getting kinda fancy with Selectors */
+	content: "»";
+	color: #000000;
+	}
+/* End Bread-Crumbs */
+/***********************************/
+/***********************************/
+/***********************************/
+/* Start Subscription Box */
+.subscription_box {
+	/* border: 3px #000000 solid; */
+	height: 190px;
+	background: url("background_subscribe.png") no-repeat;
+	}
+	
+.subscription_values {
+	display: block;
+	margin-left: 10%;
+	margin-bottom: 25px;
+	padding-left: 0px;
+	list-style-type: square;
+	font-size: 12px;
+	}
+
+.subscription_values li {
+	text-align: left;
+	padding-left: 15px;
+	}
+
+.subscription_values li:first-child { 
+	margin-right: 0px;
+	padding-left: 0px;
+	list-style-type: none;
+	font-weight: bold;
+	/* font-size: 15px; */
+	}
+/* End Subscription Box */
+/***********************************/
+/***********************************/
+/***********************************/
+}
+
